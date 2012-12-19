@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- beans节点可配置属性scope: singleton|protype, 默认:singleton -->
+<beans>
+    <!-- bean节点可配置属性:
+        scope: singleton|protype, 默认:beans的scope
+        id: 唯一标示符
+        class: 类
+        
+        property节点可配属性:
+        name: 属性名字, 必填
+        ref: 引用另外一个bean, 注入到此属性
+        value: 直接注入普通类型的值, int, float, String等
+        若ref, value为空, 将查找ID为 属性name的bean注入
+    -->
+    <bean id="testPerson" class="com.ponxu.Person" />
+    
+    <bean id="myBean" class="com.ponxu.MyBean">
+        <property name="id" value="1" />
+        <property name="person" ref="testPerson" />
+    </bean>
+</beans>
