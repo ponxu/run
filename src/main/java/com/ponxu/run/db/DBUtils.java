@@ -98,7 +98,13 @@ public class DBUtils {
 	// -------------------------------------------------------------
 	private static PreparedStatement prepareStatement(Connection conn,
 			String sql) throws SQLException {
-		PreparedStatement pstmt = conn.prepareStatement(sql);
+		PreparedStatement pstmt = null;
+		// 插入语句, 返回自增ID
+		if (sql.toLowerCase().trim().startsWith("insert ")) {
+			pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+		} else {
+			pstmt = conn.prepareStatement(sql);
+		}
 		return pstmt;
 	}
 
