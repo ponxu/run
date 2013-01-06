@@ -4,15 +4,23 @@
 
 	<groupId>com.ponxu</groupId>
 	<artifactId>run</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.1</version>
 	<packaging>jar</packaging>
 
 	<name>run</name>
-	<url>http://www.ponxu.com</url>
+	<url>https://github.com/ponxu/run</url>
+	<description>make website development more easy</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>github.repo.com.ponxu</id>
+			<url>file:///${basedir}/../mvn-repo</url>
+		</repository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
@@ -46,4 +54,5 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
 </project>
