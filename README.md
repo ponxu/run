@@ -13,6 +13,20 @@ Run
  3. Log
  4. DBUtils
 
+Maven 依赖
+----------
+
+    <repository>
+        <id>github.repo.com.ponxu</id>
+        <url>https://github.com/ponxu/mvn-repo/raw/master</url>
+    </repository>
+    <dependency>
+        <groupId>com.ponxu</groupId>
+        <artifactId>run</artifactId>
+        <version>1.1</version>
+    </dependency>
+
+
 IOC 使用
 --------
 IOC支持setter注入, 可通过xml方式和注解方式配置
